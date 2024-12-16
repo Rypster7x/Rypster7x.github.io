@@ -1,52 +1,56 @@
+/* General styling for the body and html */
 body, html {
-
-    height: 58%;
-}
-
-body {
-    /* Set the background image */
-    background-image: url('https://static.vecteezy.com/system/resources/previews/004/569/322/non_2x/christmas-ornaments-background-illustration-free-vector.jpg'); /* Replace 'your-image.jpg' with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
     height: 100%;
-    font-family: Arial, sans-serif; /* Optional font styling */
-    color: white; /* Text color */
+    margin: 0;
 }
 
-.content {
+/* Set up the full-screen background image */
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/004/569/322/non_2x/christmas-ornaments-background-illustration-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-.headertop
-{
-    padding: 30px;
-    font-family: Centaur, cursive;
+/* Center content vertically and horizontally */
+.content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding slight transparency to improve readability */
+    border-radius: 10px;
+}
+
+/* Header styling */
+.headertop {
+    padding: 20px;
+    font-family: 'Centaur', cursive;
     color: red;
-
+    font-size: 40px; /* Adjusting size for better visibility */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-
-
-.kleinespar
-{
+/* Styling for the 'DE KLEINE SPAR' text */
+.kleinespar {
     color: deeppink;
-    font-size: 90px;
+    font-size: 70px; /* Adjusted font size */
     font-weight: bold;
     font-family: 'Dancing Script', cursive;
     font-style: italic;
-
+    margin: 10px 0;
 }
 
-.maintext
-{
-    font-size: 30px;
+/* Main text styling */
+.maintext {
+    font-size: 20px;
     color: white;
-
-
-
+    margin-top: 10px;
 }
+
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
