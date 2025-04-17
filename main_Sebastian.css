@@ -1,0 +1,252 @@
+.item-holder{
+    width: 100vw;
+
+    display: flex;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* now things go top to bottom */
+}
+.toprectangle {
+    width: 100%;
+    background: radial-gradient(circle, rgba(60,76,115,1) 0%, rgba(44,43,49,1) 35%, rgba(106,106,106,0.8403010862548144) 69%, rgba(52,45,45,1) 100%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blackfriday{
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 1px;
+}
+
+.top-logo {
+    height: 90px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* stacks vertically */
+    align-items: center; /* optional: centers them horizontally */
+    padding: 20px;
+}
+.item-holder {
+    display: flex;
+    flex-wrap: wrap;           /* allows wrapping to next line */
+    justify-content: center;   /* center the whole row */
+    gap: 30px;                 /* space between items */
+    padding: 40px;
+}
+
+.item {
+    width: calc(20% - 30px);   /* 5 items per row with gap accounted */
+    box-sizing: border-box;    /* ensures padding/margins don’t break width */
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3883.jpg);
+    padding: 0;
+    margin: 0;
+}
+
+.center-top-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-top-image img {
+    max-width: 200px;
+    height: auto;
+}
+.toprectangle p {
+    margin: 0;
+    padding: 0;
+}
+
+.toprectangle   {
+    width: 100%;
+    background-color: black;
+    height: 90px;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700&display=swap');
+
+.toprectanglefont {
+    color: white;
+    margin: 30px;
+    position: absolute;
+    left: 70px;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+}
+
+
+.toprectanglefont1{
+    color: white;
+    margin: 30px;
+    position: absolute;
+    top: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+
+    left: 500px;
+}
+
+.toprectanglefont2{
+    color: white;
+    margin: 30px;
+    position: absolute;
+    top: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+
+    left: 1800px;
+
+}
+
+.toprectanglefont3{
+    color: white;
+    margin: 30px;
+    position: absolute;
+    top: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+
+    left: 1300px;
+}
+
+.item-title{
+    font-size: 20px;
+
+}
+
+.omnipotent{
+
+    font-size: 0;
+}
+
+.item {
+    font-size: 16px;
+    width: 20vw;
+    color: black;
+    padding: 0;
+    display: inline-block;
+    margin: 2px;
+}
+
+.cartdiv
+{
+    border: 1px solid darkgreen;
+    font-size: 17px;
+    text-align: left;
+    color: black;
+    font-family: "Calibri Light", cursive;
+    margin-right: 70px;
+    width: 20vw;
+}
+
+.titlefortext{
+    font-size: 22px;
+    text-align: left;
+    color: black;
+    font-family: "Calibri Light", cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+
+.item-button{
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 1px;
+    cursor: pointer;
+}
+
+.freedelivery{
+    font-size: 20px;
+    color: darkblue;
+    font-weight: bold;
+    font-family: "Yu Gothic Light", cursive;
+}
+
+#apple-price {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+
+#discounts {
+    display: inline-block;
+    margin-left: 20px;
+    text-decoration: line-through;
+    font-size: 16px;
+    color: black;
+}
+
+#headerone{
+    margin: 1px;
+    padding: 1px;
+    font-size: 36px;
+
+}
+.blue-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.blue-button:hover {
+    background-color: darkblue;
+}
+#openupcart {
+    top: 3px;
+    right: 3px;
+    padding: 0;
+    font-size: 0;
+    background: url(https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=) no-repeat center center;
+    background-size: contain;
+    border: cadetblue solid 7px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.titlefortext3
+{
+    margin: 30px;
+    text-align: center;
+
+}

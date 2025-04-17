@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartChoice</title>
+    <script src="web_shop_logic_Sebastian.js" type="text/javascript"></script>
+    <link href="main_Sebastian.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        .item-button {
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .item-button:active {
+            transform: scale(1.1);
+            background-color: #ff8800;
+        }
+
+
+        .cartdiv {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none;
+        }
+        .cartdiv.show {
+            opacity: 1;
+            display: block;
+        }
+
+        .item img {
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .item img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            width: 600px;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* Slide-in Animation for Banner */
+        .toprectangle {
+            transform: translateY(-100%);
+            animation: slideIn 1s forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        function cartDiv() {
+            let cart = document.getElementById("cart-container");
+            cart.classList.toggle("show");
+        }
+
+        function enlargeImage(src) {
+            let modal = document.getElementById("image-modal");
+            let modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("image-modal").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+
+
+<div class="toprectangle">
+    <img class="top-logo" src="https://cdn.discordapp.com/attachments/1355971815683391568/1355986126841712680/image.png?ex=67eaebfd&is=67e99a7d&hm=2f5de20aaebb8d272eaab9a09ec5ead3967f1d8fda341680fa4312cb937236e0&" alt="Top Image">
+
+    <p class="toprectanglefont"> SWEATER SHOP </p>
+    <p class="toprectanglefont1"> DELIVERING TO<br> YOUR HOUSE</p>
+    <p class="toprectanglefont2"> RETURNS<br> & ORDERS         <button onclick="cartDiv()" id="openupcart">Open Cart</button>
+    </p>
+    <p class="toprectanglefont3"> LANGUAGE: <br> English </p>
+</div>
+
+<div id="image-modal" class="modal" onclick="closeModal()">
+    <img id="modal-img">
+</div>
+
+<div>
+    <h1 class="blackfriday"></br>𝑩𝒍𝒂𝒄𝒌 𝑭𝒓𝒊𝒅𝒂𝒚</h1>
+
+</div>
+<div class="omnipotent">
+
+    <div class="item-holder">
+        <div class="item"></br></br>
+            <img src="https://m.media-amazon.com/images/I/51zDzlsTr3L.__AC_SX300_SY300_QL70_ML2_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"> <br> Xiaomi Poco F5 Pro 256GB/12GB Dual SIM Purple</h1>
+
+            <img class="item-image"/>
+
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+
+            <h2 class="item-title">Get it tuesday 20 April</h2>
+
+            <p id="apple-price" ></p>
+            <p id="discounts">€ 519.00</p>
+
+            <p id="apple-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/xiaomi_poco_f5_pro-12257.php   ', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductApple()" class="item-button">Add to Cart</button>
+        </div>
+
+
+        <div class="item"><br><br>
+            <img src="https://m.media-amazon.com/images/I/51LI4dTw3dL.__AC_SX300_SY300_QL70_ML2_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"> <br> OPPO Find X8 Pro 5G Mediatek Dimensity 9400 </h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+
+            <h2 class="item-title">Get it tomorrow</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="banana-price" ></p>
+            <p id="banana-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/oppo_find_x8_pro-13467.php', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductBanana()" class="item-button">Add to Cart</button>
+
+
+
+
+        </div>
+        <div class="item"><br><br>
+            <img src="https://m.media-amazon.com/images/I/51Rkpk4M4UL._AC_UL480_FMwebp_QL65_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"> <br> Xiaomi Poco M6 Pro <br>512GB/12GB Dual SIM Purple</h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tuesday 20 April</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="pear-price" ></p>
+            <p id="pear-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/xiaomi_poco_m6_pro-12779.php', '_blank');">
+                Specs
+            </button> </p>
+            <button onclick="boughtProductPear()" class="item-button">Add to Cart</button>
+
+        </div>
+
+
+        <div class="cartdiv" id="cart-container">
+            <h2 class="titlefortext3">Cart</h2>
+
+
+            <p class="checkout-text" id="cart-text"></p>
+            <p id="cart-text-button"></p>
+
+
+            <p class="checkout-text" id="cart-text2"></p>
+            <p id="cart-text-button1"></p>
+
+
+            <p class="checkout-text" id="cart-text3"></p>
+            <p id="cart-text-button2"></p>
+
+
+            <p class="checkout-text" id="cart-text4"></p>
+            <p id="cart-text-button3"></p>
+
+            <p class="checkout-text" id="cart-text5"></p>
+            <p id="cart-text-button4"></p>
+
+            <p class="checkout-text" id="cart-text6"></p>
+            <p id="cart-text-button5"></p>
+
+            <p class="checkout-text" id="cart-text7"></p>
+            <p id="cart-text-button6"></p>
+
+
+
+
+            <p class="checkout-text">_____________________________ +</p>
+
+            <p class="checkout-text" id="total-price">€0,-</p>
+        </div>
+        <div class="item"> <br><br>
+            <img src="https://m.media-amazon.com/images/I/81pgjnb9pVL.__AC_SX300_SY300_QL70_FMwebp_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+
+            <h1 class="titlefortext"> <br> X ASUS ROG Phone 8 Pro </h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tuesday 20 April</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="red-price" ></p>
+            <p id="red-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/asus_rog_phone_8_pro-12746.php', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductRed()" class="item-button">Add to Cart</button>
+
+        </div>
+
+        <div class="item"> <br><br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1yNjiK1rskDDqiiK5dsYy75cZl40i3cRDFmbbLoh7jIAZaHzaKyTdCwnVxTBARd4hu_c&usqp=CAU.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+
+            <h1 class="titlefortext"> <br> Realme gt 7 pro </h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tuesday 20 April</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="blue-price" ></p>
+            <p id="blue-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/realme_gt_7_pro-13470.php', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductBlue()" class="item-button">Add to Cart</button>
+
+        </div>
+
+        <div class="item"> <br><br>
+            <img src="https://tweakers.net/i/deBRjisaAthYGwuR3V2pUBg4wrs=/fit-in/374x326/filters:strip_icc():fill(white):strip_exif()/i/2006959186.jpeg?f=imagemediumplus.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+
+            <h1 class="titlefortext"> <br> Oppo a79 </h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tomorrow</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="yellow-price" ></p>
+            <p id="yellow-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/oppo_a79-12636.php', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductYellow()" class="item-button">Add to Cart</button>
+
+        </div>
+
+        <div class="item"> <br><br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8lViPo2CNFjDEH_EvDuCexwn7xP9ZfqA1w&s.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+
+            <h1 class="titlefortext"> <br> Honor x9b </h1>
+
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tuesday 20 April</h2>
+            <title>Sebastian's Shop</title>
+
+            <p id="green-price" ></p>
+            <p id="green-stock">Stock</p>
+            <p class="freedelivery">FREE DELIVERY <button class="blue-button" onclick="window.open('https://www.gsmarena.com/honor_x9b-12629.php', '_blank');">
+                Specs
+            </button> </p>
+
+            <button onclick="boughtProductGreen()" class="item-button">Add to Cart</button>
+
+        </div>
+        <div class="item"><br><br>
+            <img src="https://cdn.webshopapp.com/shops/297067/files/448393463/image.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"><br> Samsung Galaxy S24 Ultra</h1>
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it tomorrow</h2>
+            <p id="s24-price"></p>
+            <p id="s24-stock">In stock</p>
+            <p class="freedelivery">FREE DELIVERY
+                <button class="blue-button" onclick="window.open('https://www.gsmarena.com/samsung_galaxy_s24_ultra-12657.php', '_blank');">Specs</button>
+            </p>
+            <button onclick="boughtProductS24()" class="item-button">Add to Cart</button>
+        </div>
+
+        <div class="item"><br><br>
+            <img src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_SL1500_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"><br> Apple iPhone 15 Pro Max</h1>
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it Friday</h2>
+            <p id="iphone15-price"></p>
+            <p id="iphone15-stock">In stock</p>
+            <p class="freedelivery">FREE DELIVERY
+                <button class="blue-button" onclick="window.open('https://www.gsmarena.com/apple_iphone_15_pro_max-12548.php', '_blank');">Specs</button>
+            </p>
+            <button onclick="boughtProductiPhone15()" class="item-button">Add to Cart</button>
+        </div>
+
+        <div class="item"><br><br>
+            <img src="https://files.refurbed.com/ii/google-pixel-8-pro-1700127626.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"><br> Google Pixel 8 Pro</h1>
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it next week</h2>
+            <p id="pixel8pro-price"></p>
+            <p id="pixel8pro-stock">In stock</p>
+            <p class="freedelivery">FREE DELIVERY
+                <button class="blue-button" onclick="window.open('https://www.gsmarena.com/google_pixel_8_pro-12547.php', '_blank');">Specs</button>
+            </p>
+            <button onclick="boughtProductPixel8()" class="item-button">Add to Cart</button>
+        </div>
+
+        <div class="item"><br><br>
+            <img src="https://www.phoneplacekenya.com/wp-content/uploads/2023/06/OnePlus-12-5G_c.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"><br> OnePlus 12</h1>
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it Monday</h2>
+            <p id="oneplus12-price"></p>
+            <p id="oneplus12-stock">In stock</p>
+            <p class="freedelivery">FREE DELIVERY
+                <button class="blue-button" onclick="window.open('https://www.gsmarena.com/oneplus_12-12661.php', '_blank');">Specs</button>
+            </p>
+            <button onclick="boughtProductOnePlus12()" class="item-button">Add to Cart</button>
+        </div>
+
+        <div class="item"><br><br>
+            <img src="https://m.media-amazon.com/images/I/61PQvDiNwkL._AC_UF1000,1000_QL80_.jpg" height="280px" width="240px" onclick="enlargeImage(this.src)">
+            <h1 class="titlefortext"><br> Xiaomi 14 Ultra</h1>
+            <img class="item-image"/>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/756/699/small/five-stars-customer-product-rating-review-flat-icon-for-apps-and-websites-vector.jpg" height="40" width="150">
+            <h2 class="item-title">Get it Tuesday</h2>
+            <p id="xiaomi14ultra-price"></p>
+            <p id="xiaomi14ultra-stock">In stock</p>
+            <p class="freedelivery">FREE DELIVERY
+                <button class="blue-button" onclick="window.open('https://www.gsmarena.com/xiaomi_14_ultra-12700.php', '_blank');">Specs</button>
+            </p>
+            <button onclick="boughtProductXiaomi14()" class="item-button">Add to Cart</button>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
