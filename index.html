@@ -1,97 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tosti Menu</title>
+    <title>Give a Toast</title>
     <link rel="stylesheet" href="main_Sebastian.css">
 </head>
 <body>
+<header>
+    <div class="hero">
+        <img src="giveatoast.png" alt="Give a Toast" class="hero-img">
+        <h1>KOOP EEN TOSTI,<br>EN HELP MENSEN UIT DE HONGER!</h1>
+        <p>alle opbrengsten gaan naar het wereldvoedselprogramma.</p>
+        <button>LEES MEER</button>
+    </div>
+</header>
 
-<button class="cart-button">🛒 Cart</button>
-
-<div class="menu-container">
-    <h1>TOSTI MENU</h1>
-    <p class="restaurant-name">Paucek and Lage Restaurant</p>
-
-    <div class="menu-section main-course">
-        <div class="menu-items">
-            <h3>Oekraiense Tosti</h3>
+<section class="menu-section">
+    <h2>MENU</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="tosti.jpg" alt="Tosti India">
+            <div class="item-header">
+                <span>India 🌶️🌱</span>
+                <span class="toggle">▼</span>
+            </div>
             <ul>
-                <li>
-                    Cheeseburger <span>$34</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>
-                    Cheese sandwich <span>$22</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>
-                    Chicken burgers <span>$23</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>
-                    Spicy chicken <span>$33</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>
-                    Hot dog <span>$24</span>
-                    <button class="add-to-cart">Add to Cart</button>
-                </li>
+                <li>Vega Kip</li>
+                <li>Jalapeno</li>
+                <li>Chilisaus</li>
             </ul>
         </div>
-        <div class="menu-image">
-            <img src="https://www.culy.nl/wp-content/uploads/2014/10/Supersnelle-tosti-caprese.jpg" alt="Main Course">
-        </div>
-    </div>
 
-    <div class="menu-section appetizers">
-        <div class="menu-image">
-            <img src="https://www.velthuizenkeukens.nl/wp-content/uploads/2024/10/Tosti-parmaham-truffelmayonaise_2.jpg" alt="Appetizers">
-        </div>
-        <div class="menu-items">
-            <h3>Indiaase Tosti</h3>
+        <div class="menu-item">
+            <img src="tosti.jpg" alt="Tosti Oekraïne">
+            <div class="item-header">
+                <span>Oekraïne 🌱</span>
+                <span class="toggle">▼</span>
+            </div>
             <ul>
-                <li>Fruit Salad <span>$13</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
+                <li>Aardappelpuree</li>
+                <li>Bospeen</li>
+                <li>Ui</li>
+            </ul>
+        </div>
 
-
-
-                <li>Cocktails <span>$12</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>Nuggets <span>$14</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>Sandwich <span>$13</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>French Fries <span>$15</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
+        <div class="menu-item expanded">
+            <img src="tosti.jpg" alt="Tosti Afghanistan">
+            <div class="item-header">
+                <span>Afghanistan 🟢</span>
+                <span class="toggle">▲</span>
+            </div>
+            <ul>
+                <li>(Halal) Gehakt</li>
+                <li>Gedroogde Abrikoos</li>
+                <li>Hummus</li>
             </ul>
         </div>
     </div>
-
-    <div class="menu-section beverages">
-        <div class="menu-items">
-            <h3>Afghaanse Tosti</h3>
-            <ul>
-                <li>Milk Shake <span>$3</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>Iced Tea <span>$2</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>Orange Juice <span>$4</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-                <li>Lemon Tea <span>$3</span>                  <button class="add-to-cart">Add to Cart</button>
-                    </li>
-                <li>Coffee <span>$5</span>                    <button class="add-to-cart">Add to Cart</button>
-                </li>
-            </ul>
-        </div>
-        <div class="menu-image">
-            <img src="https://miljuschka.nl/wp-content/uploads/2021/02/Banaan-pindakaas-tosti-1-scaled-1-768x1152.jpg" alt="Beverages">
-        </div>
-    </div>
-
-    <div class="contact-info">
-        <p><span>📞</span> 123-456-7890 &nbsp;&nbsp; <span>📍</span> SintLucas EINDHOVEN </p>
-    </div>
-</div>
+</section>
 </body>
+</html>
+
+<script>
+    document.querySelectorAll('.item-header').forEach(header=>{
+        header.addEventListener('click',()=>{
+            header.parentElement.classList.toggle('active');
+        });
+    });
+</script>
