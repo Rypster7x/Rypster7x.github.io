@@ -14,13 +14,19 @@ body {
 }
 
 header {
-    background: linear-gradient(180deg, #3b8cff 0%, #5ca9ff 100%);
+    background-image: url('https://media.discordapp.net/attachments/1280844613518889047/1429894814723342537/image.png?ex=68f7ccd1&is=68f67b51&hm=030df2b81a62d457991e81a98fd3a2e341a691d8adfac838dc53d61f111161b8&=&format=webp&quality=lossless&width=695&height=350'); /* 👈 replace with your image filename */
+    background-position: center;
+    background-size: 1300px;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 50px 25px;
+    padding: 80px 25px;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    height: 600px;
 }
+
 
 .hero-img {
     width: 120px;
@@ -148,3 +154,71 @@ button:hover {
     }
 }
 
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.cart-icon span {
+    background: white;
+    color: #ff4d4d;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 5px;
+}
+
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 280px;
+    z-index: 999;
+}
+
+.cart-popup h3 {
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.cart-popup ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.cart-popup li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    background: #f6f8fc;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.cart-popup button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#close-cart {
+    width: 100%;
+    margin-top: 10px;
+}
