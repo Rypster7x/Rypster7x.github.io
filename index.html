@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="main_Sebastian.css">
 </head>
 <body>
+<div class="cart-icon">
+    🛒 <span id="cart-count">0</span>
+    <div id="cart-popup" class="cart-popup">
+        <h3>🛍️ Jouw Winkelwagen</h3>
+        <ul id="cart-items"></ul>
+        <button id="close-cart">Sluiten</button>
+    </div>
+</div>
+
 <header>
     <div class="hero">
         <img src="giveatoast.png" alt="Give a Toast" class="hero-img">
@@ -14,13 +23,18 @@
         <p>alle opbrengsten gaan naar het wereldvoedselprogramma.</p>
         <button>LEES MEER</button>
     </div>
+
+
 </header>
 
 <section class="menu-section">
     <h2>MENU</h2>
+
     <div class="menu-container">
+
         <div class="menu-item">
-            <img src="tosti.jpg" alt="Tosti India">
+
+            <img src="https://www.lekkerensimpel.com/wp-content/uploads/2019/12/IMG_3077-1920x920.jpg" alt="Tosti India">
             <div class="item-header">
                 <span>India 🌶️🌱</span>
                 <span class="toggle">▼</span>
@@ -30,10 +44,14 @@
                 <li>Jalapeno</li>
                 <li>Chilisaus</li>
             </ul>
+            <button class="add-to-cart">Add to Cart</button>
+
         </div>
 
+
         <div class="menu-item">
-            <img src="tosti.jpg" alt="Tosti Oekraïne">
+
+            <img src="https://www.bakkerijkalkdijk.nl/wp-content/uploads/2020/03/tosti.jpg" alt="Tosti Oekraïne">
             <div class="item-header">
                 <span>Oekraïne 🌱</span>
                 <span class="toggle">▼</span>
@@ -43,10 +61,13 @@
                 <li>Bospeen</li>
                 <li>Ui</li>
             </ul>
+            <button class="add-to-cart">Add to Cart</button>
+
         </div>
 
         <div class="menu-item expanded">
-            <img src="tosti.jpg" alt="Tosti Afghanistan">
+
+            <img src="https://www.bakkenderwijs.nl/wp-content/uploads/2022/02/uitgebreide-tosti-recept.jpg" alt="Tosti Afghanistan">
             <div class="item-header">
                 <span>Afghanistan 🟢</span>
                 <span class="toggle">▲</span>
@@ -56,6 +77,8 @@
                 <li>Gedroogde Abrikoos</li>
                 <li>Hummus</li>
             </ul>
+            <button class="add-to-cart">Add to Cart</button>
+
         </div>
     </div>
 </section>
@@ -69,3 +92,5 @@
         });
     });
 </script>
+
+<script src="web_shop_logic_Sebastian.js"></script>
