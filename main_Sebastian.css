@@ -16,37 +16,43 @@ body {
     overflow-x: hidden;
 }
 
+
 header {
-    background-image: url('https://trello.com/1/cards/68f742b79ec59dc2c14d0404/attachments/68f742b79ec59dc2c14d0437/download/image.png'); /* 👈 replace with your image filename */
+    .cart-popup button {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+
+
+    }
+    background-image: url('https://trello.com/1/cards/68f742b6b83562292577a944/attachments/68f892d187a12060a912aec5/download/image.png'); /* 👈 replace with your image filename */
     background-position: center;
-    background-size: 1300px;
+    background-size: 100%;
+    height: 700px;
     background-repeat: no-repeat;
     color: white;
+    font-weight: bold;
+    font-size: xxx-large;
     text-align: center;
-    padding: 80px 25px;
-    border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     position: relative;
-    height: 600px;
+
 }
 
 
-.hero-img {
-    width: 120px;
-    margin-bottom: 20px;
-}
 
 h1 {
-    font-size: 1.8rem;
-    line-height: 1.5;
-
-
+    font-size: 20px;
     margin-bottom: 12px;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 50px;
     margin-bottom: 20px;
+    text-shadow: -3px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 button {
@@ -122,11 +128,11 @@ button:hover {
     transition: transform 0.3s;
 }
 
+
+
 .menu-item.active .item-header span:last-child {
     transform: rotate(180deg);
 }
-
-
 
 .menu-item ul {
 
@@ -148,7 +154,6 @@ button:hover {
 
     padding: 16px 20px 20px;
 }
-
 .menu-item ul li {
     margin-bottom: 8px;
 }
@@ -172,6 +177,7 @@ button:hover {
         width: 320px;
     }
 }
+
 
 .cart-icon {
     position: fixed;
@@ -236,11 +242,150 @@ button:hover {
     border-radius: 8px;
 }
 
-.cart-popup button {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 5px 10px;
-    cursor: pointer;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --scale: 0.1;
+    --space: 8vmin;
+    --font-primary: 'Lato', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --scale: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(5, 15%, 5%);
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
+a {
+    color: hsl(65, 80%, 60%);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.page-title::after {
+    content: '↓';
+    display: block;
+    font-size: 2em;
+    opacity: 0;
+    transform: translateY(-24px);
+    animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.header,
+.footer {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.section {
+    transform-origin: center top;
+    transform: scaleY(calc(1 - var(--scale)));
+}
+
+.section > * {
+    transform-origin: center top;
+    transform: scaleY(calc(1 / (1 - var(--scale))));
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: bold;
+    line-height: 1.125;
+}
+
+.byline {
+    display: block;
+    font-size: 0.6em;
+    margin: calc(var(--space) / 1.35) 0;
+}
+
+.content {
+    position: relative;
+    margin: -50vh auto 0;
+    padding: var(--space);
+    max-width: 55ch;
+    width: calc(100% - var(--space));
+    background: hsla(5, 15%, 5%, 0.9);
+}
+
+.content > * + * {
+    margin-top: 2rem;
+}
+
+.image-container {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+.image-container img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+            to bottom,
+            hsla(5, 15%, 5%, 0) 0%,
+            hsla(5, 15%, 5%, 0.013) 8.1%,
+            hsla(5, 15%, 5%, 0.049) 15.5%,
+            hsla(5, 15%, 5%, 0.104) 22.5%,
+            hsla(5, 15%, 5%, 0.175) 29%,
+            hsla(5, 15%, 5%, 0.259) 35.3%,
+            hsla(5, 15%, 5%, 0.352) 41.2%,
+            hsla(5, 15%, 5%, 0.45) 47.1%,
+            hsla(5, 15%, 5%, 0.55) 52.9%,
+            hsla(5, 15%, 5%, 0.648) 58.8%,
+            hsla(5, 15%, 5%, 0.741) 64.7%,
+            hsla(5, 15%, 5%, 0.825) 71%,
+            hsla(5, 15%, 5%, 0.896) 77.5%,
+            hsla(5, 15%, 5%, 0.951) 84.5%,
+            hsla(5, 15%, 5%, 0.987) 91.9%,
+            hsl(5, 15%, 5%) 100%
+    );
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
