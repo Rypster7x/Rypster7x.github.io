@@ -80,8 +80,10 @@ button:hover {
 .menu-section h2 {
     color: #ff4d4d;
     margin-bottom: 25px;
-    font-size: 1.6rem;
+    font-size: 120px;
     font-weight: 700;
+    text-shadow: 10px 0 0 #000, 0 -5px 0 #000, 0 5px 0 #000, -5px 0 0 #000;
+
 }
 
 .menu-container {
