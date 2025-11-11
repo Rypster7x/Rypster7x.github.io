@@ -115,7 +115,7 @@ button:hover {
 }
 
 .item-header {
-    background: #6fa8dc;
+    background: cornflowerblue;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -181,68 +181,6 @@ button:hover {
 }
 
 
-.cart-icon {
-    position: fixed;
-    top: 20px;
-    right: 25px;
-    background: #ff4d4d;
-    color: white;
-    font-weight: bold;
-
-    padding: 10px 15px;
-    border-radius: 30px;
-
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-.cart-icon span {
-    background: white;
-    color: #ff4d4d;
-    border-radius: 50%;
-    padding: 2px 8px;
-    margin-left: 5px;
-}
-
-.cart-popup {
-    display: none;
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-
-    padding: 20px;
-    width: 280px;
-    z-index: 999;
-}
-
-.cart-popup h3 {
-    margin-bottom: 10px;
-    color: #ff4d4d;
-}
-
-.cart-popup ul {
-    list-style: none;
-
-
-    margin-bottom: 15px;
-}
-
-.cart-popup li {
-    display: flex;
-    justify-content: space-between;
-
-
-    align-items: center;
-    margin-bottom: 8px;
-
-    background: black;
-    padding: 6px 10px;
-    border-radius: 8px;
-}
 
 
 
@@ -315,7 +253,7 @@ a:focus {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: 30px;
     font-weight: bold;
     line-height: 1.125;
 }
@@ -332,7 +270,7 @@ a:focus {
     padding: var(--space);
     max-width: 55ch;
     width: calc(100% - var(--space));
-    background: hsla(5, 15%, 5%, 0.9);
+background: cornflowerblue;
 }
 
 .content > * + * {
@@ -357,34 +295,23 @@ a:focus {
     object-fit: cover;
 }
 
-.image-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(
-            to bottom,
-            hsla(5, 15%, 5%, 0) 0%,
-            hsla(5, 15%, 5%, 0.013) 8.1%,
-            hsla(5, 15%, 5%, 0.049) 15.5%,
-            hsla(5, 15%, 5%, 0.104) 22.5%,
-            hsla(5, 15%, 5%, 0.175) 29%,
-            hsla(5, 15%, 5%, 0.259) 35.3%,
-            hsla(5, 15%, 5%, 0.352) 41.2%,
-            hsla(5, 15%, 5%, 0.45) 47.1%,
-            hsla(5, 15%, 5%, 0.55) 52.9%,
-            hsla(5, 15%, 5%, 0.648) 58.8%,
-            hsla(5, 15%, 5%, 0.741) 64.7%,
-            hsla(5, 15%, 5%, 0.825) 71%,
-            hsla(5, 15%, 5%, 0.896) 77.5%,
-            hsla(5, 15%, 5%, 0.951) 84.5%,
-            hsla(5, 15%, 5%, 0.987) 91.9%,
-            hsl(5, 15%, 5%) 100%
-    );
+.menu-item.expanded .listwhite {
+    background-color: cornflowerblue !important;
+    color: white;
 }
 
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.paragraphsize
+{
+    font-size: 18px;
+
+}
 @keyframes fadein {
     to {
         opacity: 1;
