@@ -1,0 +1,65 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.titlepage {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: orangered;
+    letter-spacing: 2px;
+    margin: 40px 0;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    color: #e74c3c;
+    transform: scale(1.05);
+}
+.cantmake{
+    margin: 90px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 900px;
+
+
+}
