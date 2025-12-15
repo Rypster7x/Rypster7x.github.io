@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const cartIcon = document.querySelector('.cart-icon');
 const cartCount = document.getElementById('cart-count');
 const cartPopup = document.getElementById('cart-popup');
@@ -33,9 +34,29 @@ function updateCart() {
 
             const index = e.target.getAttribute('data-index');
             cart.splice(index, 1);
+=======
+async function getOrders() {
+    const response = await fetch('https://tostibackend6.studiomaid.nl/orders', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'c5402a68a4d876b841e577848ecd120287368ca7e209ff5bfbdb1e80cdc2f4ff'
+        }
+    });
+    const orders= await response.json();
+    console.log(orders);
+}
+>>>>>>> 2fadead7f62a7474fc9c041c2cecff9123952a4e
 
+getOrders();
 
+// console.log("Request sent for orders.", {
+//     msg: "HELLO",
+//     time: new Date().toISOString(),
+//
+// });
 
+<<<<<<< HEAD
             updateCart();
         });
     });
@@ -49,3 +70,9 @@ cartIcon.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     cartPopup.style.display = 'none';
 });
+=======
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     console.log("DOM fully loaded and parsed");
+// });
+>>>>>>> 2fadead7f62a7474fc9c041c2cecff9123952a4e
