@@ -190,14 +190,14 @@ button:hover {
     width: 100%;
     display: flex;
     margin: 0 auto;
-    padding: 0;
+
 }
 
 .imagebanner1{
     width: 100%;
     display: flex;
     margin: 0 auto;
-    height: 600px;
+    height: 390px;
 }
 
 @media (prefers-reduced-motion) {
@@ -212,7 +212,7 @@ button:hover {
 
 body {
     color: hsl(0, 0%, 95%);
-    background-color: whitesmoke;
+    background-color: white;
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     line-height: 1.6;
 }
